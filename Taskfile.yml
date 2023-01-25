@@ -1,0 +1,19 @@
+version: '3'
+
+env:
+  BINARY_NAME: file_copier
+  BUILD_FILE: "{{.BINARY_NAME}}.exe"
+  LDFLAGS: -ldflags="-s -w"
+
+  BUILD_FILE: "./__dist/{{.BINARY_NAME}}.exe"
+  RELEASE_FILE: "./__dist/release/{{.BINARY_NAME}}.exe"
+
+tasks:
+  build:
+    cmds:
+      - go build -v {{.LDFLAGS}} -o {{.BUILD_FILE}}
+  release:
+    cmds:
+      - go build -v {{.LDFLAGS}} -o {{.RELEASE_FILE}}
+      - upx --best {{.BUILD_FILE}}
+    ignore_error: true
