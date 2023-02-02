@@ -14,5 +14,5 @@ tasks:
   release:
     cmds:
       - go build -v {{.LDFLAGS}} -o {{.RELEASE_FILE}}
-      - upx --best {{.BUILD_FILE}}
+      - upx --best {{.RELEASE_FILE}}
     ignore_error: true
