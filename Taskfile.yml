@@ -2,7 +2,6 @@ version: '3'
 
 env:
   BINARY_NAME: file_copier
-  BUILD_FILE: "{{.BINARY_NAME}}.exe"
   LDFLAGS: -ldflags="-s -w"
 
   BUILD_FILE: "./__dist/{{.BINARY_NAME}}.exe"
