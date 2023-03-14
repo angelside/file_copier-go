@@ -1,8 +1,7 @@
 .vscode/
 .idea/
-.fleet
+.fleet/
 dist/*
 bin/*
 *.exe
 __*
-

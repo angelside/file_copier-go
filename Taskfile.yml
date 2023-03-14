@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 env:
   BINARY_NAME: file_copier
